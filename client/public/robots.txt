@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /adm
+Disallow: /adm-login
+Disallow: /api
+Disallow: /adm/
+Disallow: /adm/*
+Disallow: /adm-login/
+Disallow: /adm-login/*
+Disallow: /api/
+Disallow: /api/*
+
+User-agent: googlebot
+Disallow: /order
+
+Sitemap: https://advertize.com.ua/sitemap.xml

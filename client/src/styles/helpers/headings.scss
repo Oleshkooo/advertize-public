@@ -1,0 +1,53 @@
+// ? === === === === === === ===     h1
+@mixin h1 {
+    // 105px
+    font-size: 5rem;
+
+    @include q-xs {
+        font-size: 3.8rem;
+    }
+}
+
+// ? === === === === === === ===     h2
+@mixin h2 {
+    // 70px
+    font-size: 3.415rem;
+
+    @include q-xs {
+        font-size: 2.3rem;
+    }
+}
+
+// ? === === === === === === ===     h3
+@mixin h3 {
+    // 50px
+    font-size: 2.439rem;
+
+    @include q-xs {
+        font-size: 2rem;
+    }
+}
+
+// ? === === === === === === ===     h4
+@mixin h4 {
+    // 30px
+    font-size: 1.463rem;
+}
+
+// ? === === === === === === ===     h5
+@mixin h5 {
+    // 20px
+    font-size: 0.976rem;
+}
+
+// ? === === === === === === ===     h6
+@mixin h6 {
+    // 18px
+    font-size: 0.878rem;
+}
+
+// ? === === === === === === ===     body
+@mixin body {
+    // 16px
+    font-size: 0.78rem;
+}

@@ -1,0 +1,60 @@
+@import "@/styles/fn";
+
+.MapSection {
+    @include focus-padding;
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    input.search {
+        @include body;
+        @include transition-hover-active($transition-1, $transition-1t);
+
+        padding: 20px 50px;
+        background: transparent;
+        border: $stroke-sm solid $c-text;
+        color: $c-text;
+
+        &:hover {
+            @include box-shadow($sh-sm, $c-text);
+        }
+        &:focus {
+            outline: none;
+            @include box-shadow($sh-sm, $c-text);
+        }
+
+        @include q-md {
+            @include h6;
+        }
+    }
+
+    .map {
+        width: 100%;
+        height: clamp(500px, 80vh, 800px);
+        margin-top: 40px;
+        overflow: hidden;
+        border-radius: $br-3xl;
+
+        opacity: 0;
+        animation: mapInit $transition-3t $transition-1 $transition-3t forwards;
+
+        @keyframes mapInit {
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    @include q-sm {
+        .map {
+            border-radius: 0;
+        }
+
+        .mapContainer {
+            padding: 0;
+        }
+    }
+}

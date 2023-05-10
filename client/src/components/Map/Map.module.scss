@@ -1,0 +1,22 @@
+@import "@/styles/fn";
+
+$c-map-shadow: #a5a29d;
+
+.Map {
+    @include transition-hover-active($transition-1, $transition-1t);
+    @include shadow-custom($sh-md, $c-map-shadow, 0%, 0.2);
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &:hover {
+        @include shadow-custom($sh-md, darken($c-map-shadow, 10%), 0%, 0.2);
+    }
+
+    .inner {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+}

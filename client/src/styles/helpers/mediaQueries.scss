@@ -1,0 +1,73 @@
+// ? === === === === === === ===     Media
+$q-xl: 1400px;
+$q-lg: 1280px;
+$q-md: 960px;
+$q-sm: 650px;
+$q-xs: 480px;
+
+//
+
+@mixin q-xl {
+    @media screen and (max-width: $q-xl) {
+        @content;
+    }
+}
+@mixin q-lg {
+    @media screen and (max-width: $q-lg) {
+        @content;
+    }
+}
+@mixin q-md {
+    @media screen and (max-width: $q-md) {
+        @content;
+    }
+}
+@mixin q-sm {
+    @media screen and (max-width: $q-sm) {
+        @content;
+    }
+}
+@mixin q-xs {
+    @media screen and (max-width: $q-xs) {
+        @content;
+    }
+}
+
+@mixin q-cutsom($px) {
+    @media screen and (max-width: $px) {
+        @content;
+    }
+}
+
+//
+
+@mixin nq-xl {
+    @media screen and (min-width: $q-xl) {
+        @content;
+    }
+}
+@mixin nq-lg {
+    @media screen and (min-width: $q-lg) {
+        @content;
+    }
+}
+@mixin nq-md {
+    @media screen and (min-width: $q-md) {
+        @content;
+    }
+}
+@mixin nq-sm {
+    @media screen and (min-width: $q-sm) {
+        @content;
+    }
+}
+@mixin nq-xs {
+    @media screen and (min-width: $q-xs) {
+        @content;
+    }
+}
+@mixin nq-cutsom($px) {
+    @media screen and (min-width: $px) {
+        @content;
+    }
+}

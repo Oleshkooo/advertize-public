@@ -1,0 +1,83 @@
+// ? fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// ? initial
+@import "./initial/reset";
+@import "./initial/scrollbar";
+@import "./initial/hotToast";
+@import "./initial/mapBox";
+
+// ? variables
+@import "./fn";
+
+html,
+body {
+    color: $c-text;
+    background: $c-bg-1;
+    font-size: $fs-base;
+    font-weight: $fw-sm;
+    font-family: $ff-system;
+}
+
+#root {
+    overflow: hidden;
+}
+
+.intersection {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%);
+    transition: $transition-2 $transition-2t 0.15s;
+}
+
+.intersection_show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+}
+
+.spacerSm {
+    display: none;
+
+    @include q-sm {
+        display: block;
+    }
+}
+
+.spacerMd {
+    display: none;
+
+    @include nq-sm {
+        display: block;
+    }
+}
+
+.none {
+    display: none;
+}
+
+// ? other
+
+:root {
+    color-scheme: light dark;
+
+    // ? set NextUI border radiuses
+    --nextui-radii-xs: 0px !important;
+    --nextui-radii-sm: 0px !important;
+    --nextui-radii-md: 0px !important;
+    --nextui-radii-base: 0px !important;
+    --nextui-radii-lg: 0px !important;
+    --nextui-radii-xl: 0px !important;
+    --nextui-radii-2xl: 0px !important;
+    --nextui-radii-3xl: 0px !important;
+    --nextui-radii-squared: 0px !important;
+    --nextui-radii-rounded: 0px !important;
+    --nextui--inputBorderRadius: 0px !important;
+    --nextui-space-6: 0px !important;
+    // --nextui-radii-pill: 9999px !important;
+
+    // ? set NextUI colors
+    --nextui-colors-primary: #7a40ed !important;
+    // --nextui--inputBorderColor: #140726 !important;
+    // --nextui-colors-border: #140726 !important;
+}

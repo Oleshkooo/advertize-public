@@ -1,0 +1,7 @@
+@import "../fn";
+
+.toaster {
+    font-family: $ff-system !important;
+    font-size: 15px;
+    z-index: $z-toaster !important;
+}

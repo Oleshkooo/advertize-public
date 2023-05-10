@@ -1,0 +1,22 @@
+@import "@/styles/fn";
+
+.Error {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @include h3;
+        font-weight: $fw-sm;
+        text-align: center;
+    }
+}

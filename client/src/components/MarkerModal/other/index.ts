@@ -1,0 +1,6 @@
+export * from './AdminGlobal'
+export * from './AdminSide'
+export * from './Body'
+export * from './Footer'
+export * from './Header'
+export * from './Side'

@@ -1,0 +1,62 @@
+@import "@/styles/fn";
+
+.infoSection {
+    @include focus-padding;
+    color: $c-text;
+
+    .col {
+        flex: 1;
+    }
+
+    .customCol {
+        flex: 1;
+    }
+
+    .heading {
+        display: flex;
+
+        h2 {
+            @include h2;
+            flex: 10;
+            font-weight: $fw-md;
+        }
+    }
+
+    .text {
+        display: flex;
+        gap: 70px;
+
+        span {
+            @include h6;
+            flex: 5;
+        }
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-around;
+        flex: 4;
+    }
+
+    @include q-cutsom(1200px) {
+        .customCol {
+            display: none;
+        }
+    }
+
+    @include q-lg {
+        .col {
+            display: none;
+        }
+
+        .text {
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .icons {
+            width: 100%;
+            // justify-content: space-around;
+        }
+    }
+}

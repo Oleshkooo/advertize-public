@@ -1,0 +1,58 @@
+@import "@/styles/fn";
+
+@mixin min-width-height($amount) {
+    min-width: $amount;
+    min-height: $amount;
+}
+
+$min-wh: 200px;
+
+.adminLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    .card {
+        @include box-shadow($sh-sm, $c-text);
+        max-width: 500px;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            font-weight: $fw-md;
+
+            p {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .body {
+            input {
+                font-weight: $fw-xs;
+            }
+        }
+
+        .footer {
+            .link {
+                color: $c-accent-1;
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                * {
+                    width: 100%;
+                }
+
+                .submit {
+                    background: $c-accent-1;
+                }
+            }
+        }
+    }
+}

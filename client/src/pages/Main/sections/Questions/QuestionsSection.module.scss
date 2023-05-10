@@ -1,0 +1,82 @@
+@import "@/styles/fn";
+
+$gap: 250px;
+
+.QuestionsSection {
+    color: $c-theme;
+
+    .col {
+        flex: 1;
+    }
+
+    .navigation {
+        background: $c-bg-2-light;
+        color: $c-text-sec-light;
+
+        & > * {
+            &:hover {
+                color: $c-theme;
+            }
+        }
+    }
+
+    .navigationButton {
+        background: $c-bg-2;
+    }
+
+    .navigationLines {
+        background: $c-text-sec;
+    }
+
+    .inner {
+        position: absolute;
+        width: 100%;
+        background: $c-bg-2;
+        clip: rect(auto, auto, auto, auto);
+    }
+
+    .questionsContainer {
+        display: flex;
+    }
+
+    .questions {
+        display: flex;
+        width: 100%;
+        flex: 10;
+        flex-direction: column;
+        gap: $gap;
+        margin: $gap 0;
+        text-align: center;
+    }
+
+    .question {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .questionText {
+        @include h1;
+
+        @include q-xs {
+            @include h2;
+        }
+    }
+
+    .answerText {
+        color: $c-text-sec;
+        @include h6;
+        letter-spacing: 0.05em;
+    }
+
+    .hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    @include q-xl {
+        .col {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@import "@/styles/fn";
+
+.headerSection {
+    @include focus-padding;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        @include h1;
+
+        color: $c-text;
+        font-weight: $fw-lg;
+        text-align: center;
+    }
+
+    .arrow {
+        display: flex;
+        justify-content: center;
+        animation: arrowMove 4s ease 0s infinite;
+
+        @keyframes arrowMove {
+            0% {
+                transform: translateY(-10%);
+            }
+            50% {
+                transform: translateY(10%);
+            }
+            100% {
+                transform: translateY(-10%);
+            }
+        }
+    }
+}

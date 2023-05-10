@@ -1,0 +1,82 @@
+@import "@/styles/fn";
+
+$navigation-top-defo: 2.5rem;
+$navigation-right-defo: 3.415rem; // 70px
+$navigation-right-xs: 1rem;
+$transition: $transition-1 $transition-2t;
+
+:export {
+    menuShowScreenWidth: $q-xl;
+}
+
+.Navigation {
+    $blur: 15px;
+
+    @include body;
+
+    position: fixed;
+    display: flex;
+    top: $navigation-top-defo;
+    right: $navigation-right-defo;
+    gap: 45px;
+    padding: 25px 45px;
+
+    color: $c-text-sec;
+    border: 1px solid $c-text-sec-alpha-1;
+    transition: $transition;
+
+    // glassmorphism
+    background: rgba($c-bg-1, 0.9);
+    backdrop-filter: blur($blur);
+    -webkit-backdrop-filter: blur($blur);
+
+    z-index: $z-navbar;
+
+    & > * {
+        @include transition-hover-active($transition-1, $transition-1t);
+        cursor: pointer;
+
+        &:hover {
+            color: $c-text;
+        }
+        &:active {
+            background: none;
+        }
+    }
+
+    @include q-xl {
+        @include h5;
+
+        top: 0;
+        right: -150%;
+        width: clamp(150px, 80%, 350px);
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.open {
+    right: -10%;
+    transition: $transition;
+}
+
+.Menu {
+    display: none;
+    position: fixed;
+    top: $navigation-top-defo;
+    right: $navigation-right-defo;
+    padding: 10px 18px;
+    background: $c-bg-1;
+    color: $c-text-sec;
+    border: 1px solid $c-text-sec-alpha-1;
+
+    z-index: $z-menu;
+
+    @include q-xl {
+        display: block;
+    }
+    @include q-xs {
+        right: $navigation-right-xs;
+    }
+}

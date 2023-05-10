@@ -1,0 +1,67 @@
+@import "@/styles/fn";
+
+$default: $c-text;
+$active: $c-theme;
+
+.Button {
+    @include body;
+    @include transition-hover-active($transition-1, $transition-1t);
+    @include scale-hover-active($scale-3xs);
+
+    padding: 20px 85px;
+    text-decoration: none;
+    text-align: center;
+    color: $c-theme;
+    font-weight: $fw-lg;
+
+    &:hover {
+        @include box-shadow($sh-sm, $default);
+    }
+
+    @include q-md {
+        @include h6;
+    }
+}
+
+.primary {
+    $color: $c-accent-1;
+    @include bg-hover-active($color);
+
+    &:hover {
+        @include box-shadow($sh-md, $color);
+    }
+}
+
+.secondary {
+    $color: $c-accent-2;
+    @include bg-hover-active($color);
+
+    &:hover {
+        @include box-shadow($sh-md, $color);
+    }
+}
+
+.bordered {
+    padding: 20px 50px;
+    background: transparent;
+    border: $stroke-sm solid $default;
+    color: $default;
+
+    &:hover {
+        border: $stroke-sm solid $default;
+        color: $active;
+        background: $default;
+    }
+}
+
+.borderedNoHover {
+    padding: 20px 50px;
+    background: transparent;
+    border: $stroke-sm solid $default;
+    color: $default;
+}
+
+.borderedActive {
+    color: $active;
+    @include bg-hover-active($default);
+}

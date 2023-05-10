@@ -1,0 +1,76 @@
+@import "@/styles/fn";
+
+.MapSection {
+    @include focus-padding;
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        & > * {
+            scale: 0;
+            animation: filterButtonInit $transition-4t $transition-1 0s forwards;
+
+            @keyframes filterButtonInit {
+                100% {
+                    scale: 1;
+                }
+            }
+        }
+    }
+
+    .map {
+        width: 100%;
+        height: clamp(500px, 80vh, 800px);
+        margin-top: 40px;
+        overflow: hidden;
+        border-radius: $br-3xl;
+
+        opacity: 0;
+        animation: mapInit $transition-3t $transition-1 $transition-3t forwards;
+
+        @keyframes mapInit {
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    .helpers {
+        @include body;
+
+        display: flex;
+        gap: 35px;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            span:first-of-type {
+                aspect-ratio: 1 / 1;
+                width: 15px;
+                border-radius: 50%;
+            }
+
+            .billboard {
+                background-color: $с-marker-red;
+            }
+
+            .arka {
+                background-color: $с-marker-blue;
+            }
+        }
+    }
+
+    @include q-sm {
+        .map {
+            border-radius: 0;
+        }
+
+        .mapContainer {
+            padding: 0;
+        }
+    }
+}

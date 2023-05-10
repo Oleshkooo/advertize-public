@@ -1,0 +1,8 @@
+@import "@/styles/fn";
+
+.ModalElement {
+    --safe-area-inset-top: env(safe-area-inset-top);
+    --safe-area-inset-bottom: env(safe-area-inset-bottom);
+
+    max-height: calc(100% - 50px - (var(--safe-area-inset-top) + var(--safe-area-inset-bottom))) !important;
+}

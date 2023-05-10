@@ -1,0 +1,35 @@
+@import "@/styles/fn";
+
+// $c-green: #0fe500;
+// $c-red: #f72119;
+
+.icon {
+    display: block;
+    cursor: pointer;
+    filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2)) !important;
+}
+
+.billboard {
+    color: $с-marker-red;
+}
+.billboard-busy {
+    color: rgba($с-marker-red, $opacity-busy);
+}
+
+.arka {
+    color: $с-marker-blue;
+}
+.arka-busy {
+    color: rgba($с-marker-blue, $opacity-busy);
+}
+
+.last {
+    color: $с-marker-last;
+}
+.last-busy {
+    color: rgba($с-marker-last, $opacity-busy);
+}
+
+.busy {
+    opacity: 0.1;
+}

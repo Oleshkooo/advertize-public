@@ -1,0 +1,13 @@
+scripts
+public
+templates
+.vscode/
+node_modules/
+build/
+dist/
+package-lock.json
+rollup.config.js
+rollup.config.mjs
+babel.config.js
+vite-env.d.ts
+vite.config.ts

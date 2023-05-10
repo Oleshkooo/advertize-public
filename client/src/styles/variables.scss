@@ -1,0 +1,101 @@
+// ? === === === === === === ===     main
+$fs-base: calc(15px + 0.390625vw);
+$ff-inter: "Inter", sans-serif;
+$ff-system: -apple-system, BlinkMacSystemFont, $ff-inter, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+// ? === === === === === === ===     font weight
+$fw-3xs: 100;
+$fw-2xs: 200;
+$fw-xs: 300;
+
+$fw-sm: 400;
+$fw-md: 500;
+$fw-lg: 600;
+
+$fw-xl: 700;
+$fw-2xl: 800;
+$fw-3xl: 900;
+
+// ? === === === === === === ===     border radius
+$br-none: 0px;
+$br-xs: var(--nextui-radii-xs);
+$br-sm: var(--nextui-radii-sm);
+$br-md: var(--nextui-radii-md);
+$br-lg: var(--nextui-radii-lg);
+$br-xl: var(--nextui-radii-xl);
+$br-2xl: var(--nextui-radii-2xl);
+$br-3xl: var(--nextui-radii-3xl);
+
+// ? === === === === === === ===     wcale
+$scale-3xs: 0.01;
+$scale-2xs: 0.02;
+$scale-xs: 0.03;
+$scale-md: 0.05;
+
+// ? === === === === === === ===     stroke
+$stroke-xs: 1px;
+$stroke-sm: 2px;
+
+// ? === === === === === === ===     shadow
+$sh-xs: 0px 4px 10px;
+$sh-sm: 0px 8px 25px;
+$sh-md: 0px 10px 50px;
+
+// ? === === === === === === ===     blur
+$blur-sm: 5px;
+$blur-md: 15px;
+$blur-lg: 30px;
+
+// ? === === === === === === ===     transition
+$transition-1: ease;
+$transition-2: cubic-bezier(0.17, 0.55, 0.55, 1);
+
+$transition-1t: 0.3s;
+$transition-2t: 0.5s;
+$transition-3t: 0.8s;
+$transition-4t: 1s;
+$transition-5t: 1.5s;
+
+// ? === === === === === === ===     color
+$c-hover: 3%;
+$c-active: 6%;
+
+$c-theme: #fff;
+$c-theme-hover: #ffffffb2;
+
+$c-text: #11181c;
+
+// $c-text-sec: #97979b;
+$c-text-sec: #777;
+$c-text-sec-light: #999;
+$c-text-sec-alpha-1: rgba($c-text-sec, 0.15);
+
+$c-accent-1: #7a40ed;
+$c-accent-2: #29a9ff;
+$c-accent-3: #f5ff63;
+
+$c-bg-1: #fff;
+$c-bg-2: #140726;
+$c-bg-2-light: #1d1336;
+
+$c-input-border: rgba(0, 0, 0, 0.15);
+
+// ? === === === === === === ===     markers
+$opacity-busy: 0.8;
+
+$с-marker-red: #e41f24;
+
+$с-marker-blue: #4d4dff;
+
+$с-marker-last: #088700;
+
+// ? === === === === === === ===     modal
+$modal-padding: 2.813rem; // 45px
+
+// ? === === === === === === ===     z-index
+$z-navbar: 600;
+$z-menu: 800;
+// $z-modal: 1400;
+$z-toaster: 100000;
+$z-page-animation: 1000000;

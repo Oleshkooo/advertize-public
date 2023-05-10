@@ -1,0 +1,70 @@
+@mixin focus-padding {
+    padding-top: 25px;
+    @content;
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+}
+
+@mixin margin-padding-top($amount) {
+    margin-top: calc($amount / 2);
+    padding-top: calc($amount / 2);
+}
+
+//
+
+@mixin shadow-custom($type, $color, $darkenAmount, $alpha) {
+    box-shadow: $type rgba(darken($color, $darkenAmount), $alpha);
+    @content;
+}
+@mixin shadow($type, $color) {
+    $amount: 10%;
+    box-shadow: $type rgba(darken($color, $amount), 10%);
+    @content;
+}
+@mixin filter-shadow($type, $color) {
+    $amount: 10%;
+    filter: drop-shadow($type rgba(darken($color, $amount), 0.1));
+    @content;
+}
+@mixin box-shadow($type, $color) {
+    $amount: 40%;
+    box-shadow: $type rgba(darken($color, $amount), 0.1);
+    @content;
+}
+
+//
+
+@mixin transition-hover-active($transition, $time) {
+    transition: $transition $time;
+    &:hover {
+        transition: $transition $time;
+    }
+    &:active {
+        transition: $transition $time;
+    }
+    @content;
+}
+@mixin bg-hover-active($color) {
+    background: $color;
+    &:hover {
+        background: darken($color, $c-hover);
+    }
+    &:active {
+        background: darken($color, $c-active);
+    }
+    @content;
+}
+@mixin scale-hover-active($amount) {
+    &:hover {
+        scale: 1 + $amount;
+    }
+    &:active {
+        scale: 1 - $amount;
+    }
+    @content;
+}

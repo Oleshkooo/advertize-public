@@ -1,0 +1,17 @@
+@import "@/styles/fn";
+
+$navbar-top-defo: 3.5rem;
+$navbar-top-xs: 2.5rem;
+
+.Navbar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: $navbar-top-defo;
+
+    @include q-xs {
+        padding-top: $navbar-top-xs;
+    }
+}

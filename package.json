@@ -1,0 +1,12 @@
+{
+    "name": "advertize",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "cd ./build; pnpm pre; pnpm start",
+        "build": "sh ./scripts/build.sh"
+    },
+    "dependencies": {
+        "pm2": "^5.3.0"
+    }
+}

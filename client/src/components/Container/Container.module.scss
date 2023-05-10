@@ -1,0 +1,14 @@
+@import "@/styles/fn";
+
+$initial-padding: 3.415rem;
+$max-width: 1500px;
+
+.Container {
+    max-width: $max-width;
+    padding: 0 $initial-padding;
+    margin: 0 auto;
+
+    @include q-xs {
+        padding: 1rem;
+    }
+}
